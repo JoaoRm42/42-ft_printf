@@ -23,6 +23,7 @@
 # include <stdarg.h>
 # include <stdint.h>
 
+/* Funções do mandatory. */
 int			ft_printf(const char *format, ...);
 int			ft_singlechar(int c);
 int			ft_printstr(char *str);

@@ -12,6 +12,9 @@
 
 #include "ft_printf.h"
 
+/*
+ * Escreve um único carácter no stdout e devolve 1.
+ */
 int	ft_singlechar(int c)
 {
 	write(1, &c, 1);

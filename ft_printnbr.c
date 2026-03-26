@@ -12,6 +12,9 @@
 
 #include "ft_printf.h"
 
+/*
+ * Imprime um número sem sinal em base 10 e devolve os bytes escritos.
+ */
 int	ft_printunnbr(unsigned long nbr)
 {
 	int	i;
@@ -27,6 +30,9 @@ int	ft_printunnbr(unsigned long nbr)
 	return (i);
 }
 
+/*
+ * Imprime um número com sinal em base 10 e devolve os bytes escritos.
+ */
 int	ft_printnbr(long nbr)
 {
 	int	i;

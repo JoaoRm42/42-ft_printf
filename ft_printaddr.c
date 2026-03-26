@@ -12,6 +12,9 @@
 
 #include "ft_printf.h"
 
+/*
+ * Escreve um número em hexadecimal minúsculo, usado para endereços.
+ */
 int	ft_printaddr(unsigned long nbr)
 {
 	char	*hexa;
@@ -29,6 +32,9 @@ int	ft_printaddr(unsigned long nbr)
 	return (count);
 }
 
+/*
+ * Imprime um ponteiro no formato 0x... ou (nil) quando é nulo.
+ */
 int	ft_printp(unsigned long nbr)
 {
 	int	count;

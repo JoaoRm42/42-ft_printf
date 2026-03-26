@@ -12,6 +12,9 @@
 
 #include "ft_printf.h"
 
+/*
+ * Encaminha cada conversão para a função responsável e devolve bytes escritos.
+ */
 int	print_and_count(va_list args, char character)
 {
 	int	i;
@@ -38,6 +41,9 @@ int	print_and_count(va_list args, char character)
 	return (i);
 }
 
+/*
+ * Replica o comportamento base do printf para as conversões obrigatórias.
+ */
 int	ft_printf(const char *str, ...)
 {
 	va_list	args;

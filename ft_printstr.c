@@ -12,6 +12,9 @@
 
 #include "ft_printf.h"
 
+/*
+ * Imprime uma string C; quando recebe NULL escreve "(null)".
+ */
 int	ft_printstr(char *str)
 {
 	int	i;

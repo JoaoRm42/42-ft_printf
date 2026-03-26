@@ -12,6 +12,9 @@
 
 #include "ft_printf.h"
 
+/*
+ * Imprime um unsigned int em hexadecimal com letras maiúsculas.
+ */
 int	ft_printhexaup(unsigned int nbr)
 {
 	char	*hexa;
@@ -29,6 +32,9 @@ int	ft_printhexaup(unsigned int nbr)
 	return (count);
 }
 
+/*
+ * Imprime um unsigned int em hexadecimal com letras minúsculas.
+ */
 int	ft_printhexalow(unsigned int nbr)
 {
 	char	*hexa;

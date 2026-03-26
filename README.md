@@ -1,17 +1,19 @@
-# 42 ft_printf Project
+﻿# 42 ft_printf Project
 
 Welcome to the 42 ft_printf Project repository! This project is part of the 42 curriculum, and its goal is to reimplement the standard `printf` function in C. This project will help you understand variadic functions, formatted output, and other advanced C programming concepts.
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Project Objectives](#project-objectives)
+- [Features](#features)
 - [Requirements](#requirements)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Testing](#testing)
 - [Contributing](#contributing)
 - [Acknowledgments](#acknowledgments)
-- [Grade](#grade)
+- [Code](#code)
 
 ## Introduction
 
@@ -20,29 +22,49 @@ The `ft_printf` project is designed to help students gain a deeper understanding
 ## Project Objectives
 
 - Implement a custom `printf` function.
-- Handle various format specifiers (e.g., `%d`, `%s`, `%x`).
+- Handle format specifiers and output formatting rules.
 - Manage variadic function arguments.
 - Ensure the function behaves similarly to the standard `printf`.
+
+## Features
+
+### Mandatory
+- Supported conversions: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`, `%%`.
+- Output count return value, compatible with `printf` behavior.
+
+### Bonus
+- Flags support: `-`, `0`, `.`, `#`, `+`, and space.
+- Field minimum width support.
+- Combination of flags under all required conversions.
 
 ## Requirements
 
 - A Unix-based operating system (Linux or macOS).
-- GCC compiler.
+- GCC/Clang compiler.
+- Make.
 - Basic understanding of C programming.
 
 ## Project Structure
 
-Here's a brief overview of the project structure:
+A brief overview of the project structure:
 
-```
+```text
 .
-├── ft_printf.h
 ├── ft_printf.c
-├── ft_printnbr.c
+├── ft_printf.h
 ├── ft_printaddr.c
 ├── ft_printhexa.c
+├── ft_printnbr.c
 ├── ft_printstr.c
 ├── ft_singlechar.c
+├── ft_printf_bonus.c
+├── ft_printf_bonus.h
+├── ft_printf_parse_bonus.c
+├── ft_printf_format_bonus.c
+├── ft_printf_text_bonus.c
+├── ft_printf_dispatch_bonus.c
+├── ft_printf_convert_bonus.c
+├── ft_printf_output_bonus.c
 ├── Makefile
 └── README.md
 ```
@@ -50,53 +72,66 @@ Here's a brief overview of the project structure:
 ## Installation
 
 1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/joaoped2-42PORTO/42-ft_printf.git
-    cd 42-ft_printf
-    ```
+```bash
+git clone https://github.com/joaoped2-42PORTO/42-ft_printf.git
+cd 42-ft_printf
+```
 
-2. **Compile the Project**:
-    ```bash
-    make
-    ```
+2. **Compile Mandatory**:
+```bash
+make
+```
 
-    This will create the necessary object files and a library file (e.g., `libftprintf.a`).
+3. **Compile Bonus**:
+```bash
+make bonus
+```
+
+This will generate `libftprintf.a`.
 
 ## Usage
 
-To use the `ft_printf` function in your own projects, include the `ft_printf.h` header file and link the library during compilation.
+To use `ft_printf` in your own projects, include the header and link the library.
 
 1. **Include the Header**:
-    ```c
-    #include "ft_printf.h"
-    ```
+```c
+#include "ft_printf.h"
+```
 
 2. **Link the Library**:
-    ```bash
-    gcc -o myprogram myprogram.c -L. -lftprintf
-    ```
+```bash
+gcc -o myprogram myprogram.c -L. -lftprintf
+```
 
 3. **Run the Program**:
-    ```bash
-    ./myprogram
-    ```
+```bash
+./myprogram
+```
+
+## Testing
+
+- Norminette:
+```bash
+norminette *.c *.h
+```
+
+- Rebuild from scratch:
+```bash
+make fclean && make
+make fclean && make bonus
+```
 
 ## Contributing
 
-Contributions are welcome! If you have any suggestions or improvements, feel free to create an issue or submit a pull request. Please ensure that your contributions adhere to the coding standards and guidelines of the project.
-
+Contributions are welcome! If you have suggestions or improvements, feel free to open an issue or submit a pull request.
 
 ## Acknowledgments
 
-- The 42 Network for providing the inspiration and resources for this project.
-- The C programming community for their excellent documentation and support.
-- All contributors who have helped improve this project.
+- The 42 Network for providing the project and evaluation framework.
+- The C community for documentation and references.
 
 ## Code
 
-- Norminette: Ok!
-- Grade: 100/100
-
----
-
-Happy coding!
+- Norminette: OK
+- Mandatory: ✅
+- Bonus: ✅
